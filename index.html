@@ -110,7 +110,7 @@
             <div id="sankey-container" class="panel">
                 <div id="hover-info"></div>
                 
-                <div class="legend">
+                <!-- <div class="legend">
                     <div class="legend-item">
                         <div class="legend-color" style="background: rgba(190, 147, 212, 0.5); border: 3px solid #BE93D4;"></div>
                         <span> Hovered Node</span>
@@ -119,11 +119,21 @@
                         <div class="legend-color" style="background: rgb(255, 255, 0); border: 3px solid rgb(255, 255, 0);"></div>
                         <span> Hovered Link</span>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
 
-        <!-- Key Insights and Study Summary Panels -->
+        <div class="sankey-legend">
+            <ul class="horizontal-legend">
+                <li><span class="legend-color" style="background: #66b2ff;"></span>Note-Taking</li>
+                <li><span class="legend-color" style="background: #F57474;"></span>Study Hours</li>
+                <li><span class="legend-color" style="background: #ffc966;"></span>Reading Frequency</li>
+                <li><span class="legend-color" style="background: #b1cf86;"></span>Class Attendance</li>
+                <li><span class="legend-color" style="background: #CEB6E8;"></span>GPA</li>
+            </ul>
+            <p>Darker shades indicate higher values, lighter shades indicate lower values.</p>
+        </div>
+        
         <div class="top-panels">
             <div id="insight-panel" class="panel">
                 <h2>Key Insights</h2>
@@ -142,6 +152,7 @@
                     <div class="intro-card">
                         <h3><img src="https://em-content.zobj.net/source/apple/391/graduation-cap_1f393.png" class="emoji">Introduction</h3>
                         <p>
+                            
                             Does taking notes in class lead to better grades? 
                             While note-taking is often seen as a key academic skill, it may not be the strongest predictor of success. 
                             This tool explores the relationship between note-taking frequency, class attendance, reading habits, and weekly study hours to uncover which factors truly drive higher GPAs.

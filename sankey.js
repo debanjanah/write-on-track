@@ -26,10 +26,10 @@ const cgpaCategories = ["<2.00", "2.00-2.49", "2.50-2.99", "3.00-3.49", "3.50+"]
 // Color scales for better visual differentiation
 const colorScales = {
     "Note-Taking": ["#cce5ff", "#99ccff", "#66b2ff"],
-    "Study Hours": ["#ffcccc", "#ff9999", "#ff6666", "#ff3333"],
+    "Study Hours": ["#ffcccc", "#ff9999", "#F57474", "#EC5050"],
     "Reading Frequency": ["#ffedcc", "#ffdb99", "#ffc966"],
     "Class Attendance": ["#d2e6b5", "#b1cf86", "#AFD777"],
-    "CGPA": ["#FFD0DC", "#ffc2d1", "#ffb3c6", "#ff8fab", "#fb6f92"]
+    "CGPA": ["#E7E1EE", "#DCD1E8", "#D6C4E8", "#CEB6E8", "#C19BE8"]
 };
 
 function preload() {
@@ -662,9 +662,11 @@ function drawSankeyDiagram() {
         // Highlight the link if it's hovered
         if (link === hoveredLink) {
             fill(255, 255, 0, 200); // Highlighted color
-        } else if (selectedNode && (link.source === selectedNode || link.target === selectedNode)) {
-            fill(190, 147, 212, 150); // Lilac for selected node connections
-        } else {
+        } 
+        // else if (selectedNode && (link.source === selectedNode || link.target === selectedNode)) {
+        //     fill(190, 147, 212, 150); // Lilac for selected node connections
+        // } 
+        else {
             fill(linkColor);
         }
   
@@ -699,8 +701,8 @@ function drawSankeyDiagram() {
             // Highlight selected node
             let nodeColor = colorScales[node.category][categoryIndex] || "#cccccc";
             if (node === selectedNode) {
-                fill(190, 147, 212, 150);  //Change fill to periwinkle when selected
-                stroke('#BE93D4');
+                fill(255, 255, 0, 100);  //Change fill to periwinkle when selected
+                stroke('#ffff00');
                 strokeWeight(3);
             } else {
                 fill(nodeColor); // Use the node's color instead of white
